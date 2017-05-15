@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--
+Problem #2
+Write a JavaScript program to highlight the bold words of
+the following paragraph by changing the text color to red, on mouse over.
+
+We have just started this section for the users (beginner to intermediate)
+who want to work with various JavaScript problems and write scripts online to test their JavaScript skill.
+
+Hint: wordItems = document.getElementsByTagName('strong');
+ // The paragraph uses <strong></strong> tags for the bold words. Change <strong> default behavior.
+
+-->
+<script>
+    function stext() {
+        var x = document.getElementById("div1");
+        var y = document.getElementById("div2");
+        x.style.color = 'red';
+        y.style.color = 'black';
+    }
+
+</script>
+
+<!-- <font onmouseover="this.color='red';" onmouseout="this.color='blacḱ';">Text1</font> -->
+
+<h3>Unit 9 Assignment, Problem Two</h3>
+<h4> Write a JavaScript program to highlight the bold words of
+    the following paragraph by changing the text color to red, on mouse over.</h4>
+<font onmouseover="this.color='red';" onmouseout="this.color='black';"> We have just started this section for the users (beginner to intermediate)
+    who want to work with various JavaScript problems and write scripts online to test their JavaScript skill. </font>
+
+</body>
+</html>

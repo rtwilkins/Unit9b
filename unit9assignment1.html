@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+    <title>Demo</title>
+    </head>
+    <body>
+
+  <!--
+
+    Unit 9 Assignment, Problem #1
+    Write a JavaScript program that changes the HTML code that prints "Hello World" to have it say "Good Night World" .
+    Hint: innerHTML
+    Robert Wilkins
+ -->
+  <h1>Click the button to change the text</h1>
+  <h3>Unit 9 Assignment, Problem One uses jQuery</h3>
+    <button id="custSub" type="Hello World" class="button left large" data-text-swap="Good Night World &nbsp;">Hello World &nbsp;<i class="fa fa-angle-double-right"></i></button>
+
+    <script src="jquery-3.2.1.js"></script>
+    <script>
+
+    // Your code goes here.
+    jQuery(document).ready(function ($) {
+
+        $("button").on("click", function() {
+            var el = $(this);
+            if (el.html() == el.data("text-swap")) {
+                el.html(el.data("text-original"));
+            } else {
+                el.data("text-original", el.html());
+                el.html(el.data("text-swap"));
+            }
+            setTimeout(function () {
+                el.html(el.data("text-original"));
+            }, 1000);
+        });
+
+    });  // Your code goes here.
+    </script>
+    </body>
+    </html>
